@@ -122,11 +122,11 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+# Channels
 # mysite/settings.py
-# Channels
-ASGI_APPLICATION = 'mysite.asgi.application'
-
-# Channels
+# Channels at the root routing configuration. 
+# Edit the mysite/settings.py file again and 
+# add the following to the bottom of it:
 ASGI_APPLICATION = 'mysite.asgi.application'
 CHANNEL_LAYERS = {
     'default': {

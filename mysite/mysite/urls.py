@@ -14,6 +14,9 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 # mysite/urls.py
+# point the root URLconf at the chat.urls module. 
+# In mysite/urls.py, add an import for django.conf.urls.include 
+# and insert an include() in the urlpatterns list,
 from django.conf.urls import include
 from django.urls import path
 from django.contrib import admin

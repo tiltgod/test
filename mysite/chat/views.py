@@ -1,6 +1,7 @@
 # chat/views.py
 from django.shortcuts import render
 
+# view function for the room view.
 def index(request):
     return render(request, 'template/chat/index.html')
 

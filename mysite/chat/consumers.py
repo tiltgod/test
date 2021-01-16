@@ -1,8 +1,18 @@
 # chat/consumers.py
+# When Django accepts an HTTP request, 
+# it consults the root URLconf to lookup a view function, 
+# and then calls the view function to handle the request. 
+# Similarly, when Channels accepts a WebSocket connection, 
+# it consults the root routing configuration to lookup a consumer, 
+# and then calls various functions on the consumer to handle events from the connection.
 import json
 from asgiref.sync import async_to_sync
 from channels.generic.websocket import WebsocketConsumer
 
+
+# This is a synchronous WebSocket consumer that accepts all connections, 
+# receives messages from its client, and echos those messages back to the same client. 
+# For now it does not broadcast messages to other clients in the same room.
 class ChatConsumer(WebsocketConsumer):
     def connect(self):
         self.room_name = self.scope['url_route']['kwargs']['room_name']
