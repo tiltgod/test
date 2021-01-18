@@ -75,7 +75,7 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
-
+# sqlite3 database need not to be in memory for run the tests
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
